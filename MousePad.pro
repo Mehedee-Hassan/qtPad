@@ -13,9 +13,17 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    myserver.cpp \
+    mythread.cpp \
+    robot.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    controlrobot.h \
+    myserver.h \
+    mythread.h \
+    Robot.h \
+    utility.h
 
 FORMS    += mainwindow.ui
 
