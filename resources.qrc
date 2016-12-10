@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>external/back4.png</file>
+        <file>external/cross.png</file>
+        <file>external/font.ttf</file>
+        <file>back3.png</file>
+    </qresource>
+</RCC>
