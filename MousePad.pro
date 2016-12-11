@@ -17,18 +17,20 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     myserver.cpp \
     mythread.cpp \
-    robot.cpp \
-    updateuithread.cpp
+    robot.cpp
 
 HEADERS  += mainwindow.h \
     controlrobot.h \
     myserver.h \
     mythread.h \
     Robot.h \
-    utility.h \
-    updateuithread.h
+    utility.h
 
 FORMS    += mainwindow.ui
 
 RESOURCES += \
     resources.qrc
+
+
+
+RC_ICONS = mpi.ico

@@ -18,13 +18,13 @@ int main(int argc, char *argv[])
     QString hostname = server.getLocalHoseName();
 
 
-   // qDebug()<<"mainIp"<<mainIp<<" "<<"othersIp"<<othersIp<<" \n";
+//    qDebug()<<"mainIp"<<mainIp<<" "<<"othersIp"<<othersIp<<" \n";
 
 
 
     MainWindow w;
     w.setUpThisUI();
-    w.setIpInformation(mainIp,othersIp,hostname,&server);
+    w.setIpInformation(mainIp,othersIp,hostname);
     w.show();
 
     return a.exec();

@@ -218,20 +218,7 @@ void MainWindow::ShowAbout(){
 }
 
 
-void MainWindow::updateUI(){
 
-
-//    QString mainIp = this->myserver->findMainIp();
-//    QString othersLocalIp = this->myserver->getAllLocalIp();
-//    QString hostname = this->myserver->getLocalHoseName();
-
-
-//    setIpInformation( mainIp , othersLocalIp, hostname);
-
-//    changeLabelText();
-
-
-}
 
 
 
@@ -246,13 +233,3 @@ void MainWindow::setIpInformation(QString mainIp ,QString othersLocalIp,QString 
 }
 
 
-
-void MainWindow::setIpInformation(QString mainIp ,QString othersLocalIp,QString hostname,MyServer *server){
-    this->mainIp = mainIp;
-    this->othersLocalIp = othersLocalIp;
-    this->hostname = hostname;
-
-    this->myserver = server;
-
-    changeLabelText();
-}

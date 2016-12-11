@@ -4,5 +4,7 @@
         <file>external/cross.png</file>
         <file>external/font.ttf</file>
         <file>back3.png</file>
+        <file>external/mouse_red_small16.ico</file>
+        <file>mpi.ico</file>
     </qresource>
 </RCC>

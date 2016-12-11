@@ -23,12 +23,12 @@ public:
 
     explicit MainWindow(QWidget *parent = 0);
 
-    void setIpInformation(QString mainIp ,QString othersLocalIp,QString hostname,MyServer *server);
     void setIpInformation(QString mainIp ,QString othersLocalIp,QString hostname);
 
     void setUpThisUI();
-    MyServer *myserver;
-    void updateUI();
+
+
+
     void changeLabelText();
 
     ~MainWindow();
