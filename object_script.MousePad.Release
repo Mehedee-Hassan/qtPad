@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\myserver.o
+./release\mythread.o
+./release\robot.o
+./release\mousepad_plugin_import.o
+./release\qrc_resources.o
+./release\moc_mainwindow.o
+./release\moc_myserver.o
+./release\moc_mythread.o
+);

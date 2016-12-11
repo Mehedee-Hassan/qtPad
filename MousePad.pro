@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT += network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,14 +17,16 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     myserver.cpp \
     mythread.cpp \
-    robot.cpp
+    robot.cpp \
+    updateuithread.cpp
 
 HEADERS  += mainwindow.h \
     controlrobot.h \
     myserver.h \
     mythread.h \
     Robot.h \
-    utility.h
+    utility.h \
+    updateuithread.h
 
 FORMS    += mainwindow.ui
 

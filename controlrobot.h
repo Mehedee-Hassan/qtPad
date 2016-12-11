@@ -42,14 +42,14 @@ void mainControl_Robot(QList<QByteArray> singleData)
             if(lenSingleNthData>0)
             {
 
-            qDebug() << "\nline = "<<singleData[0] <<"|\n";
+          //  qDebug() << "\nline = "<<singleData[0] <<"|\n";
 
 
 
 //            qDebug() << singleData[0] << "\n";
 
             if ( singleData[0] == COMMAND_MOUSE_LEFT_CLICK ) {
-                qDebug() <<("left click");
+           //     qDebug() <<("left click");
 
                 robot.mouseLeftCLick(false);
             }
@@ -59,12 +59,12 @@ void mainControl_Robot(QList<QByteArray> singleData)
             }
 
             else if (singleData[0] == COMMAND_MOUSE_PAD_SHORT_CLICK) {
-                qDebug() <<("short click");
+             //   qDebug() <<("short click");
 
                 robot.mouseLeftCLick(false);
             }
             else if (singleData[0] == COMMAND_MOUSE_LEFT_CLICKHOLD){
-                qDebug() <<("left hold click");
+             //   qDebug() <<("left hold click");
 
                 robot.mouseLeftCLick(true);
                 clickAndHold = true;
@@ -73,7 +73,7 @@ void mainControl_Robot(QList<QByteArray> singleData)
 
             else if (singleData[0] == COMMAND_MOUSE_PAD_UP){
 
-                qDebug() <<("pad up");
+//                qDebug() <<("pad up");
 
                 if (clickAndHold == true){
                     clickAndHold = false;
@@ -84,7 +84,7 @@ void mainControl_Robot(QList<QByteArray> singleData)
 
             }
             else if (singleData[0] == COMMAND_CLOSE_WINDOW) {
-                qDebug() <<("close window");
+              //  qDebug() <<("close window");
 
                 robot.AltF4();
             }
@@ -95,7 +95,7 @@ void mainControl_Robot(QList<QByteArray> singleData)
 
             else if (singleData[0] == COMMAND_ENTER) {
                 robot.pressEnter();
-                qDebug() <<("command neter");
+             //   qDebug() <<("command neter");
 
 
             }

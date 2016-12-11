@@ -16,24 +16,15 @@ class MyServer : public QTcpServer
 
 public:
 
-     static QString __iplist[50];
-     static int __ipListCount;
 
 
     explicit MyServer(QObject *parent = 0);
     void startServer();
     void printMyIp();
     void clearIpList();
-    void getAllLocalIp();
-
-
-    void findMainIp();
-
-    void setIpListFound(bool value);
-    bool getIpListFound();
-
-    void setMainIpFound(bool value);
-    bool getMainIpFound();
+    QString getAllLocalIp();
+    QString findMainIp();
+    QString getLocalHoseName();
 
 
 
@@ -44,8 +35,7 @@ public slots:
 protected:
     void incomingConnection(qintptr socketDescriptor);
 
-     bool __IpListFound;
-     bool __MainIpFound;
+
 
 
 };

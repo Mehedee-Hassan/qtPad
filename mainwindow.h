@@ -6,6 +6,9 @@
 #include <QMenu>
 #include <QAction>
 #include <QIcon>
+#include "myserver.h"
+
+
 
 namespace Ui {
 class MainWindow;
@@ -16,7 +19,17 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
+    Ui::MainWindow *ui;
+
     explicit MainWindow(QWidget *parent = 0);
+
+    void setIpInformation(QString mainIp ,QString othersLocalIp,QString hostname,MyServer *server);
+    void setIpInformation(QString mainIp ,QString othersLocalIp,QString hostname);
+
+    void setUpThisUI();
+    MyServer *myserver;
+    void updateUI();
+    void changeLabelText();
 
     ~MainWindow();
 
@@ -27,18 +40,23 @@ private slots:
     void ShowAbout();
 
 private:
-    Ui::MainWindow *ui;
     QSystemTrayIcon *tray;
     QMenu *trayIconMenu;
     QAction *restoreAction;
     QAction *closeAction,*aboutAction;
     QIcon trayIcon;
+    QString mainIp;
+    QString othersLocalIp,hostname;
+
     void createTray();
     void changeEvent(QEvent* event);
-    void changeLabelText();
+
     void closeEvent (QCloseEvent *event);
 
-};
+
+
+
+    };
 
 
 #endif // MAINWINDOW_H

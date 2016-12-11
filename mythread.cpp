@@ -17,7 +17,7 @@ MyThread::MyThread(qintptr ID, QObject *parent) :
 void MyThread::run()
 {
     // thread starts here
-    qDebug() << " Thread started";
+   // qDebug() << " Thread started";
 
     socket = new QTcpSocket();
 
@@ -37,7 +37,7 @@ void MyThread::run()
     connect(socket, SIGNAL(disconnected()), this, SLOT(disconnected()));
 
     // We'll have multiple clients, we want to know which is which
-    qDebug() << socketDescriptor << " Client connected";
+    //qDebug() << socketDescriptor << " Client connected";
 
 
 
@@ -66,17 +66,17 @@ void MyThread::readyRead()
 
 
     // will write on server side window
-     qDebug() << socketDescriptor << " Data in: " << Data;
+    // qDebug() << socketDescriptor << " Data in: " << Data;
 
 
-     qDebug() << "\nreturn "<<Data[0]<<" "<<Data[1];
+    // qDebug() << "\nreturn "<<Data[0]<<" "<<Data[1];
 
 
 
 
      ///todo change in android to send new line before flag search
      if(Data[0] == '1' && Data[1] == '8'){
-             qDebug() << "\nreturn 18";
+      //       qDebug() << "\nreturn 18";
             socket->write(QHostInfo::localHostName().toStdString().c_str());
 
      }
@@ -84,7 +84,7 @@ void MyThread::readyRead()
      // if it is a valid data
      // first will be '\n'
     if(Data[0] == '\n'){
-        qDebug() << "\nnew line found = "<<Data <<"|\n";
+    //    qDebug() << "\nnew line found = "<<Data <<"|\n";
 
 
 
@@ -100,7 +100,7 @@ void MyThread::readyRead()
 
                 if(listOfMessage[i].length() > 0){
 
-                    qDebug() << "\neach big line = "<<listOfMessage[i] <<"\n";
+       //             qDebug() << "\neach big line = "<<listOfMessage[i] <<"\n";
 
                     QList<QByteArray> singleData = utility_splitQbA(listOfMessage[i],' ');
                     mainControl_Robot(singleData);
@@ -123,7 +123,7 @@ void MyThread::readyRead()
 
 void MyThread::disconnected()
 {
-    qDebug() << socketDescriptor << " Disconnected";
+   // qDebug() << socketDescriptor << " Disconnected";
 
 
     socket->deleteLater();

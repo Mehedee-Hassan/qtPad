@@ -259,89 +259,7 @@ void Robot::F4KeyUp(){
 
 
 
-Robot::UndoKey(){
-    INPUT ip;
-    ip.type = INPUT_KEYBOARD;
-    ip.ki.wScan = 0;
-    ip.ki.time = 0;
-    ip.ki.dwExtraInfo = 0;
 
-
-    // Press the "Enter" key
-    ip.ki.wVk = VK_CONTROL;
-    ip.ki.dwFlags = 0; // 0 for key press
-    SendInput(1, &ip, sizeof(INPUT));
-
-
-
-
-    ip.ki.wVk = 'Z';
-    ip.ki.dwFlags = 0; // 0 for key press
-    SendInput(1, &ip, sizeof(INPUT));
-
-
-    Sleep(10);
-
-
-    // Release the "Enter" key
-    ip.ki.wVk = 'Z';
-    ip.ki.dwFlags = KEYEVENTF_KEYUP;
-    SendInput(1, &ip, sizeof(INPUT));
-
-
-
-    // Release the "Enter" key
-    ip.ki.wVk = VK_CONTROL;
-    ip.ki.dwFlags = KEYEVENTF_KEYUP;
-    SendInput(1, &ip, sizeof(INPUT));
-}
-
-Robot::RedoKey(){
-    INPUT ip;
-    ip.type = INPUT_KEYBOARD;
-    ip.ki.wScan = 0;
-    ip.ki.time = 0;
-    ip.ki.dwExtraInfo = 0;
-
-
-    // Press the "Enter" key
-    ip.ki.wVk = VK_CONTROL;
-    ip.ki.dwFlags = 0; // 0 for key press
-    SendInput(1, &ip, sizeof(INPUT));
-
-     Sleep(10);
-
-    ip.ki.wVk = VK_SHIFT;
-    ip.ki.dwFlags = 0; // 0 for key press
-    SendInput(1, &ip, sizeof(INPUT));
-
-    Sleep(10);
-
-    ip.ki.wVk = 'Z';
-    ip.ki.dwFlags = 0; // 0 for key press
-    SendInput(1, &ip, sizeof(INPUT));
-
-
-    Sleep(10);
-
-
-    // Release the "Enter" key
-    ip.ki.wVk = 'Z';
-    ip.ki.dwFlags = KEYEVENTF_KEYUP;
-    SendInput(1, &ip, sizeof(INPUT));
-
-     Sleep(10);
-    // Release the "Enter" key
-    ip.ki.wVk = VK_SHIFT;
-    ip.ki.dwFlags = KEYEVENTF_KEYUP;
-    SendInput(1, &ip, sizeof(INPUT));
-
-     Sleep(10);
-    // Release the "Enter" key
-    ip.ki.wVk = VK_CONTROL;
-    ip.ki.dwFlags = KEYEVENTF_KEYUP;
-    SendInput(1, &ip, sizeof(INPUT));
-}
 
 
 void Robot::KeyPressE(){
@@ -375,47 +293,6 @@ void Robot::KeyReleaseE(){
     SendInput(1, &ip, sizeof(INPUT));
 }
 
-
-
-Robot::WindowsKeyPress(){
-    INPUT ip;
-    ip.type = INPUT_KEYBOARD;
-    ip.ki.wScan = 0;
-    ip.ki.time = 0;
-    ip.ki.dwExtraInfo = 0;
-
-
-        // Press the "ALt" key
-        ip.ki.wVk = VK_LWIN;
-        ip.ki.dwFlags = 0; // 0 for key press
-        SendInput(1, &ip, sizeof(INPUT));
-}
-
-
-
-Robot::WindowsKeyRelease(){
-    INPUT ip;
-    ip.type = INPUT_KEYBOARD;
-    ip.ki.wScan = 0;
-    ip.ki.time = 0;
-    ip.ki.dwExtraInfo = 0;
-
-
-
-    ip.ki.wVk = VK_LWIN;
-    ip.ki.dwFlags = KEYEVENTF_KEYUP;
-    SendInput(1, &ip, sizeof(INPUT));
-}
-
-
-
-Robot::ExplorarOpen(){
-    WindowsKeyPress();
-    KeyPressE();
-    Sleep(10);
-    KeyReleaseE();
-    WindowsKeyRelease();
-}
 
 
 

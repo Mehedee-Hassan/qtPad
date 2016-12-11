@@ -48,11 +48,6 @@ public:
 	void F4KeyDown();
 	void F4KeyUp();
 
-    void UndoKey();
-    void RedoKey();
-
-    void WindowsKeyPress();
-    void WindowsKeyRelease();
 
 	void pressEnter();
 	void pressESC();

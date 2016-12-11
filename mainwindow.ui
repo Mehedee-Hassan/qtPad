@@ -21,30 +21,12 @@
    <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>500</x>
-      <y>370</y>
-      <width>85</width>
-      <height>26</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:rgb(0,0,0);
-background:rgb(85, 255, 255);
-</string>
-    </property>
-    <property name="text">
-     <string>OK</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="DetailsLabel">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>180</x>
       <y>0</y>
-      <width>301</width>
+      <width>291</width>
       <height>411</height>
      </rect>
     </property>
@@ -69,16 +51,16 @@ padding:5px;</string>
    <widget class="QGraphicsView" name="graphicsView">
     <property name="geometry">
      <rect>
-      <x>-120</x>
+      <x>-130</x>
       <y>0</y>
-      <width>291</width>
+      <width>311</width>
       <height>461</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-image: url(:/external/back4.png);
 font: 8pt &quot;Segoe Print&quot;;
-background-color: rgb(255, 255, 255);
+background-color: rgb(157,237,26)
 
 </string>
     </property>

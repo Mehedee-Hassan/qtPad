@@ -1,0 +1,12 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\myserver.o
+./debug\mythread.o
+./debug\robot.o
+./debug\mousepad_plugin_import.o
+./debug\qrc_resources.o
+./debug\moc_mainwindow.o
+./debug\moc_myserver.o
+./debug\moc_mythread.o
+);
